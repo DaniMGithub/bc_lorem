@@ -1,0 +1,958 @@
+body { 
+    margin:0px; 
+    padding:0px; 
+    display: grid;  
+
+
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/* INICIO - HEADER */
+
+header {
+    height: 5%;  
+	width: 100%;
+	z-index: 10;
+}
+
+.foto_header .fotoinicio {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+    background-size: 5%;  
+	height: 5%;  
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+header h1 {
+
+    background-color: rgba(109, 177, 236, 0.8);
+	display: flex;
+    color: .fff;
+    padding: 0 2%; 
+    position: absolute;
+    top: 2%; 
+    left: 2%; 
+}
+header h2 {
+    background-color: rgba(109, 177, 236, 0.8);
+    color: .fff;
+	display: flex;
+    padding: 0 2%; 
+    position: absolute;
+    top: 8%;  
+    left: 2%; 
+}
+
+
+header .logos {
+	z-index: 3;
+    display: inline-block;
+    align-self: stretch;
+    align-self: flex-start;
+    width: 30%;
+    height: 15%;
+	padding: 0 2%; 
+    position: absolute;
+    top: 2%; 
+    right: 2%; 
+ 
+}
+
+header .logos .logo{
+	z-index: 3;
+    display: inline-block;
+    align-self: stretch;
+    align-items: flex-start;    
+   width: 50%;
+   position: absolute;
+   top: 2%; 
+   right: 5%; 
+
+}
+/* FIN- HEADER */
+
+
+    
+ /* Menú principal - horizontal  */
+   
+.menuprincipal
+ {
+     margin-top:0%;
+     background: #48cae4;
+ }
+ 
+ .menuprincipal ul
+ { 
+     list-style:none;
+     position:relative;
+     float:center;
+     margin:0;
+     padding:0
+ }
+ 
+ .menuprincipal ul a
+ {
+     display:block;
+     color:.333;
+     text-decoration:none;
+     font-weight:700;
+     font-size:12px;
+     line-height:32px;
+     padding:0 15px;
+     font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+ }
+ 
+ .menuprincipal ul li
+ {
+     position:relative;
+     float:left;
+     margin:0;
+     padding:0
+ }
+ 
+ .menuprincipal ul li.fijo
+ {
+     background: aquamarine;
+ }
+ 
+ .menuprincipal ul li:hover
+ {
+     background: rgb(133, 223, 223);
+ }
+ 
+ .menuprincipal ul ul
+ {
+     display:none;
+     position:absolute;
+     top:100%;
+     left:0;
+     background:#00b4d8;
+     padding:0
+ }
+ 
+ .menuprincipal ul ul li
+ {
+     float:none;
+     width:200px
+ }
+ 
+ .menuprincipal ul ul a
+ {
+     line-height:120%;
+     padding:10px 15px
+ }
+ 
+ .menuprincipal ul ul ul
+ {
+     top:0;
+     left:100%
+ }
+ 
+ .menuprincipal ul li:hover > ul
+ {
+     display:block
+ }
+
+ 
+ /* galeria de fotos */
+
+
+.galeria div {
+    display: grid;
+  /*   grid-template-columns: 1fr,1fr,1fr,1fr,1fr ; */
+    display: inline-block;
+    flex-wrap: nowrap;
+    grid-row: auto;
+   
+    
+  }
+
+ .galeria {
+	background: linear-gradient(-45deg, aquamarine, aqua, #23a6d5, #23d5ab);
+	 background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.galeria div h2{
+    text-align: center;}
+  
+.galeria div img {
+   /*  filter: grayscale(100) blur(1px); */
+    transition: all 0.3s;
+    position: relative;
+    width: 15%;
+    height: 15%;
+    border-style: ridge;
+    border-radius: 2%;
+    border: .054f5e;
+    justify-content: space-around;
+    margin: 2%;
+  }
+.galeria div img:hover {
+      filter: grayscale(0);
+     transform: scale(1.1);
+    z-index: 2;
+    cursor: pointer;
+    border-style: ridge;
+    border-radius: 2%;
+    width: 15%;
+    height: 15%;
+    justify-content: space-around;
+    margin: 2%;
+   
+   }
+
+.concurso div h2{
+    text-align: center;}
+
+
+ /*  FOTOS DEL CONCURSO EMPIEZA */
+
+ .titulo_del_concurso{
+    margin-top: 3%;
+    text-align: center;
+    background-color: aquamarine;
+
+ }
+
+ .grid-gallery {
+    display: grid;
+    grid-auto-rows: 200px;
+    gap: 1rem;
+    grid-auto-flow: row dense;
+  }
+  
+  @media all and (min-width: 320px) {
+    .grid-gallery {
+      grid-template-columns: repeat(1, 1fr);
+      
+     
+    }
+  }
+  
+  @media all and (min-width: 768px) {
+    .grid-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    
+    }
+  }
+  
+  @media all and (min-width: 1024px) {
+    .grid-gallery {
+      grid-template-columns: repeat(6, 1fr);
+     
+    }
+  }
+  
+  .grid-gallery__item:nth-child(11n+1) {
+    grid-column: span 1;
+    
+  }
+  
+  .grid-gallery__item:nth-child(11n+4) {
+    grid-column: span 2;
+    grid-row: span 1;
+   
+  }
+  
+  .grid-gallery__item:nth-child(11n+6) {
+    grid-column: span 3;
+    grid-row: span 1;
+    
+  }
+  
+  .grid-gallery__item:nth-child(11n+7) {
+    grid-column: span 1;
+    grid-row: span 2;
+    
+  }
+  
+  .grid-gallery__item:nth-child(11n+8) {
+    grid-column: span 2;
+    grid-row: span 2;
+   
+  }
+  
+  .grid-gallery__item:nth-child(11n+9) {
+    grid-row: span 3;
+   
+  }
+  
+.grid-gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: flex;
+  }
+
+.grid-gallery .grid-gallery__image {
+    /*  filter: grayscale(100) blur(1px); */
+     transition: all 0.3s;
+     position: relative;
+     border-style: ridge;
+     border-radius: 2%;
+     border: .054f5e;
+     justify-content: space-around;
+     margin: 2%;
+   }
+
+
+
+  .grid-gallery .grid-gallery__image:hover {
+filter: grayscale(0);
+transform: scale(1.1);
+  z-index: 2;
+  cursor: pointer;
+  border-style: ridge;
+  border-radius: 2%;
+  justify-content: space-around;
+  margin: 2%;
+ 
+ }
+
+ /*  FOTOS DEL CONCURSO TERMINA */
+
+
+
+
+
+ /* PAGINA DE INICIO */
+
+main{
+    display: row;
+    display: inline-block;
+    grid-template-columns: 1fr,2fr,1fr;
+    width: auto; 
+    margin-top: 5%;
+    align-items: baseline;
+    
+    }
+
+main .aside{
+    display: inline-block;
+    align-self: stretch;
+    align-content: center;
+    align-items: baseline;
+    background-color: rgb(240, 156, 177);
+    width: 25%;  
+    margin-left: 1%;
+    height: 100%;
+    justify-content: center; 
+    border-radius: 5%;
+         
+       }
+    
+main .aside .libro{
+border-radius: 25%;
+overflow: hidden;
+       }
+
+
+
+       
+main .articulo1 {    
+    display: inline-block;
+    align-self: stretch;
+    align-items: flex-end;    
+    background-color: #fff;
+    align-items: baseline;
+    width: 30%; 
+    height: 100%;
+    justify-content: right; 
+  
+}
+
+main .articulo2 {
+    display: inline-block;
+    align-self: stretch;
+    background-color: rgb(228, 85, 85);
+    align-items: baseline;
+    width: 35%; 
+    height: 100%;
+    justify-content: right; 
+   
+}
+
+
+/* ESTILO PARA LA PÁGINA DE SERVICIOS*/
+article{
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+    margin-top: 8%;
+}
+article .info .biblio{
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.cuerpo{
+    
+    display: grid;
+    display: inline-block;
+    width: auto;
+    display: flex;
+    align-self: stretch;
+    grid-template-columns: 1fr,2fr,1fr;
+}
+
+.titulos{
+    display: inline-block;
+    align-self: center;
+    width: 100%;
+    margin-top: 2%;
+
+
+}
+
+.cuerpo{
+    display: grid;
+    display: inline-block;
+    grid-template-columns: 1fr,2fr;
+    width: auto; 
+    margin-top: 5%;
+    }
+
+ 
+
+
+.cuerpo .aside{
+    display: inline-block;
+    align-self: stretch;
+    align-content: center;
+    background-color: rgb(240, 156, 177);
+    width: 25%;  
+    margin-left: 1%;
+    justify-content: center; 
+    border-radius: 5%;
+    height: 100%;
+   
+     
+   }
+
+.cuerpo .aside .libro{
+    border-radius: 25%;
+   
+   }
+.lorem{
+    display: block;
+    width: 50%; 
+   align-items: left;
+   }
+
+.biblio{
+    display: flex;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.servicioss{
+    display: inline-block;
+    display: grid;
+    display: inline-block;
+    width: auto;
+    display: flex;
+    align-self: stretch;
+    grid-template-columns: 2fr,1fr,1fr,1fr,1fr,1fr;
+    
+        
+}
+
+.servicioss .servicios1{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+
+}
+
+.servicioss .servicios1{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+
+}
+.servicioss .servicios1{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+.servicioss .servicio2{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+.servicioss .servicio3{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+.servicioss .servicio4{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+.servicioss .servicio5{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+
+.servicios2{
+    display: inline-block;
+    display: grid;
+    display: inline-block;
+    width: auto;
+    display: flex;
+    align-self: stretch;
+    grid-template-columns: 2fr,1fr,1fr,1fr,1fr,1fr;
+  
+    
+}
+
+
+.servicios2 .servicio6{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+  
+
+}
+.servicios2 .servicio7{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+.servicios2 .servicio8{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+.servicios2 .servicio9{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+
+}
+.servicios2 .servicio10{
+    display:block;
+    display: flex;
+    background-color: rgb(238, 199, 141);
+    border: 2px;
+    border-color: black;
+    border: 2px;
+    border-color: black;
+    border-style: dotted;
+    border-radius: 15%;
+}
+
+/* ESTILO PARA LA PÁGINA DE CALIDAD*/
+
+.titulor{
+    margin-top: 2%;
+}
+
+article{
+
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+    margin-top: 8%;
+}
+article .info .biblio{
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+
+.calidad{
+    
+    display: grid;
+    display: inline-block;
+    width: auto;
+    display: flex;
+    align-self: stretch;
+    grid-template-columns: 1fr,2fr,1fr;
+}
+
+
+
+.calidad .aside{
+    display: inline-block;
+    align-self: stretch;
+    align-text: center;
+    background-color: rgb(240, 156, 177);
+    width: 25%;  
+    margin-left: 1%;
+    height: 100%;
+    justify-content: center; 
+    border-radius: 5%;
+     
+   }
+
+   .calidad .aside .organigrama{
+    display: flex;
+    align-self: center;
+    width: 40%;
+
+   }
+
+   .calidad .aside .libro{
+    border-radius: 25%;
+    display: flex;
+    align-self: center;
+    
+   }
+
+   .textoorganigrama{
+    display: flex;
+    width: 20%;  
+    align-self: right;
+    border-style: solid 2px black;    
+   }
+
+.comentarios{
+    
+    display: inline-block;
+    display: flex;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.comentarios .comentariopepe {
+    display: flex;
+    align-items: stretch;
+    background-color: rgb(195, 120, 224);
+    width: 100%;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    align-items: baseline;
+    justify-content: flex-end; 
+
+}
+
+.comentarios .comentariopepe .pepe{
+border-radius: 50%;
+width: 100%;
+
+
+}
+
+.comentarios .comentariolaura {
+    background-color: rgb(195, 120, 224);
+    width: 100%;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    align-items: baseline;
+    justify-content: flex-end; 
+
+}
+
+.comentarios .comentariolaura .laura{
+    border-radius: 50%;
+    width: 50%;
+
+}
+.comentarios .comentariojuan {
+    display: inline-block;
+    background-color: rgb(195, 120, 224);
+    width: 100%;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    align-items: baseline;
+    justify-content: flex-end; 
+
+}
+
+.comentarios .comentariojuan .juan{
+    border-radius: 50%;
+    width: 50%;
+
+}
+
+
+.comentarios2{
+    
+ 
+    display: inline-block;
+    display: flex;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    justify-content: space-around;
+}
+.comentarios2 .comentariopedro {
+    display: flex;
+    align-items: stretch;
+    background-color: rgb(195, 120, 224);
+    width: 100%;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    align-items: baseline;
+    justify-content: flex-end; 
+
+}
+
+.comentarios2 .comentariopedro .pedro{
+border-radius: 50%;
+width: 100%;
+
+
+}
+
+.comentarios2 .comentarioandrea {
+    background-color: rgb(195, 120, 224);
+    width: 100%;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    align-items: baseline;
+    justify-content: flex-end; 
+
+}
+
+.comentarios2 .comentarioandrea .andrea{
+    border-radius: 50%;
+    width: 50%;
+
+}
+.comentarios2 .comentariojuana {
+    display: inline-block;
+    background-color: rgb(195, 120, 224);
+    width: 100%;
+    border: 2px;
+    border-style: dashed;
+    border-color: black;
+    align-items: baseline;
+    justify-content: flex-end; 
+
+}
+
+.comentarios2 .comentariojuana .juana{
+    border-radius: 50%;
+    width: 50%;
+
+}
+
+/* ESTILO PARA LA PÁGINA DE historia*/
+.cuerpo{
+    display: grid;
+    grid-template-columns: 1fr,1fr,2fr;
+    display: inline-block;
+    width: auto;
+    display: flex;
+    align-self: stretch;
+    
+}
+
+.cuerpo .historia{
+    flex-wrap: wrap;
+    display: block;
+    width: 35%;
+    display: inline-block;
+
+}
+.cuerpo .historia .info .biblio{
+flex-wrap: wrap;
+  width: 25%;
+  height: 25%;
+  display: block;
+  display: inline-block;
+}
+
+.cuerpo .aside{
+    display: block;
+    display: inline-block;
+    align-self: flex-start;
+    align-text: center;
+    background-color: rgb(240, 156, 177);
+    margin-left: 1%;
+    justify-content: center; 
+    border-radius: 5%;
+     
+   }
+
+   .cuerpo  .aside .libro{
+    border-radius: 15%;
+    display: flex;
+    align-self: center;
+   }
+
+/*.biblio{
+    display: flex;
+    align-self: center;
+  
+   } */
+
+   .cuerpo .video_historia .history{
+    display: block;
+    display: inline-block;
+  
+}
+
+
+
+/* FOOTER */
+.foot {
+    display: block;
+    width: 100%;
+    border: 3px;
+    border-color: black;
+    align-items: baseline;
+    justify-content: flex-end; 
+   
+
+}
+.foot{
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 30%, 90%;
+       
+    }
+
+.iframe{
+    display: flex;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+
+.mapasitio {
+    display: flex;
+    list-style-type: square;
+}
+
+.foot {
+	background: linear-gradient(-45deg, #22c1c3, #3ec0b0, #62bf98, #acbd65);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
